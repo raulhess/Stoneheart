@@ -14,28 +14,40 @@ html, body {
 
 @media (min-width: 768px) {
   .sidebar {
-    position: fixed;
-    width: 250px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #373d47;
-    border-right: 1px solid #222933;
+	position: fixed;
+	width: 250px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	display: block;
+	overflow-x: hidden;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+	background-color: #373d47;
+	border-right: 1px solid #222933;
   }
 }
 
-.sidebar > a {
+.sidebar .active {
+	color: #FFFFFF;
+	background-color: #24272d;
+}
+
+.sidebar .active:hover {
+	background-color: #24272d;
+}
+
+.sidebar a {
 	display: block;
-	color: #CCCCCC;
 	text-decoration: none;
 	padding: 10px 20px;
 	transition: 0.3s background;
+	color: #CCCCCC;
 }
 
-.sidebar > a:HOVER {
-	background-color: #222933;
+.sidebar a:hover {
+	background-color: #2C323D;
 }
+
+
+
