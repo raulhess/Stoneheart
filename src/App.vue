@@ -6,7 +6,19 @@
 
 <script>
 export default {
-  name: 'App'
+
+  name: 'App',
+
+  mounted() {
+    console.log('[init] mounted App')
+    this.$store.dispatch('stoneheart/startLoading')
+    setTimeout(()=>{
+      this.$store.dispatch('stoneheart/stopLoading')
+      console.log('hi',this.$store.state.stoneheart.isLoading)
+      this.$forceUpdate()
+    },2000)
+  },
+
 }
 </script>
 
