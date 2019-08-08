@@ -44,7 +44,8 @@ module.exports = function (ctx) {
         'QList',
         'QItem',
         'QItemSection',
-        'QItemLabel'
+        'QItemLabel',
+        'QSpinner'
       ],
 
       directives: [
@@ -77,7 +78,7 @@ module.exports = function (ctx) {
     },
 
     // animations: 'all', // --- includes all animations
-    animations: [],
+    animations: 'all',
 
     ssr: {
       pwa: false

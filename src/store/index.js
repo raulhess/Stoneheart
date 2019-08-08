@@ -21,7 +21,5 @@ export default function (/* { ssrContext } */) {
     strict: process.env.DEV
   })
 
-  console.log('[init] mounted store')
-
   return Store
 }

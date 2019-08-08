@@ -1,8 +1,19 @@
 <template>
-  <q-page>
-    <div v-show="isLoading" class="fullscreen absolute bg-grey flex flex-center">
-      Ta carregando
-    </div>
+  <q-page style="max-width: 400px; margin: auto; background-color: yellow;">
+    <transition
+      leave-active-class="animated fadeOut"
+    >
+      <div v-show="isLoading" class="fullscreen absolute bg-black text-white flex flex-center">
+        <div class="text-center">
+          <div class="full-width">Loading...</div>
+          <q-spinner
+            color="white"
+            size="3em"
+            class="q-mt-sm"
+          />
+        </div>
+      </div>
+    </transition>
     <div>
       <login-component>
       </login-component>

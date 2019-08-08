@@ -23,4 +23,8 @@ export default {
 </script>
 
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+  body {
+    font-family: 'Press Start 2P', cursive;
+  }
 </style>
