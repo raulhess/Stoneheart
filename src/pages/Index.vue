@@ -1,5 +1,5 @@
 <template>
-  <q-page style="max-width: 400px; margin: auto; background-color: yellow;">
+  <q-page style="max-width: 400px; margin: auto; background-color: white;">
     <transition
       leave-active-class="animated fadeOut"
     >
@@ -15,8 +15,9 @@
       </div>
     </transition>
     <div>
-      <login-component>
+      <login-component v-if="!game">
       </login-component>
+
     </div>
   </q-page>
 </template>
@@ -25,7 +26,10 @@
 </style>
 
 <script>
-import loginComponent from '../components/login'
+import loginComponent from '../components/login.vue'
+import mainScreenComponent from '../components/mainScreen.vue'
+import battleScreenComponent from '../components/battleScreen.vue'
+
 export default {
 
   name: 'Index',
@@ -37,6 +41,9 @@ export default {
   },
 
   computed: {
+    game: function() {
+      return this.$store.state.stoneheart.game
+    },
     isLoading: function() {
       return this.$store.state.stoneheart.isLoading
     },
@@ -46,7 +53,9 @@ export default {
   },
 
   components:{
-    "login-component": loginComponent
+    "login-component": loginComponent,
+    "main-screen-component": mainScreenComponent,
+    "battle-screen-component": battleScreenComponent
   }
   
 }
